@@ -1,3 +1,30 @@
-body{
-    background-color: aqua;
+
+input.blue.search{
+color: green;
 }
+div{
+    background-color:grey ;
+    margin: 3%;
+    padding: 3%;
+}
+img{
+    padding: 2% 44%;
+}
+p{
+    line-height: 130%;
+text-align: justify;
+    /* margin: auto; */
+text-align: center;
+    /* WIDTH: 50%; */
+}
+span{
+    display: block;
+    /* margin: 1% 0 0 37%; */
+    text-align: center;
+    /* padding: 5%; */
+    
+}
+i{
+    width: 200%;
+}
+
