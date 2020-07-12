@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/styles/layout.css"> -->
+    
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+
+
+
+</head>
+
+<body>
+    <header>Searching</header>
+    <main>
+        <!-- <form action="/search" method="get">
+            <input type="text"name="nameof" placeholder="What you are searching for">
+            <button value="tilte"> By Title</button>
+            <button value="auther">By Auther</button> -->
+            <!-- <button value="any">Go</button> -->
+
+        <!-- </form>  -->
+        <form action="/searches" method="post">
+            <label>
+                <span>Name</span>
+                <input type="text" name="name" required>
+            </label>
+            
+            <label >Search By Title
+                <input type="radio" class="blue" name="TypeOfSearch" value="intitle" checked>
+            </label>
+            <label >Search By Auther
+                <input type="radio" class="blue" name="TypeOfSearch" value="inauthor">
+            </label>
+            <button>Search</button>
+            
+        </form>
+
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>
