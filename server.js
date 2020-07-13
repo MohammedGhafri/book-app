@@ -40,9 +40,12 @@ server.get('/hello',(req,res)=>{
 //     res.render('./pages/searches/new.ejs');
 // })
 function Book(item){
-this.title=item.title;
-this.authors=item.authors||'The Auther is Unknown';
-this.image=item.imageLinks.smallThumbnail||`https://i.imgur.com/J5LVHEL.jpg`;
+    this.image=item.volumeInfo.imageLinks.thumbnail||'https://i.imgur.com/J5LVHEL.jpg';
+    this.title=item.volumeInfo.title;
+    this.authors=item.volumeInfo.authors||'The Auther is Unknown';
+    this.description=item.searchInfo.textSnippet;
+    this.ISBN=item.volumeInfo.industryIdentifiers[0].identifier.slice(item.volumeInfo.industryIdentifiers[0].identifier.indexOf(":")+1);
+
 }
 server.post('/searches',(req,res)=>{
     console.log('Get request',req.body);
@@ -50,13 +53,18 @@ server.post('/searches',(req,res)=>{
     console.log(req.body.TypeOfSearch)
     const name=req.body.name;
     const search=req.body.TypeOfSearch;
-
+    
     const URL=`https://www.googleapis.com/books/v1/volumes?q=${name}+${search}`;
     superagent.get(URL)
-    .then(result=> result.body.items.map(book=>new Book(book.volumeInfo)))
+    // .then(result=>{
+    //     res.send(result.body.items);
+
+    // })
+    .then(result=> result.body.items.map(book=>new Book(book)))
     .then(renderData=> { 
         console.log(renderData);
-        res.render('./pages/searches/show.ejs',{bookData:renderData})});
+        res.render('./pages/searches/show.ejs',{bookData:renderData})
+    });
     
     
 
