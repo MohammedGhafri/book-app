@@ -5,8 +5,8 @@ CREATE TABLE book (
   title VARCHAR(255),
   auther VARCHAR(255),
   description text,
+  isbn VARCHAR(255),
   bookShelf VARCHAR(255)
 );
 
--- INSERT INTO book (img, title, auther, description, bookShelf) 
--- VALUES('feed Sherry','Razan','do immediately after getting home','pets','Sherry is hungry');
+INSERT INTO book (img, title, auther, description,isbn, bookShelf) VALUES ('https://i.imgur.com/J5LVHEL.jpg','Mohammed','Book','mmmmm','123456789','irbid');
