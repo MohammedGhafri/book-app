@@ -30,7 +30,15 @@
         </nav>
     </header>
     <main>
+        <section>
+
+
+        
         <% data.forEach(item=>{ %>
+<div>
+
+
+
         <img src="<%=item.img %>" alt="">
         <h2>
             <%= item.title %>
@@ -38,7 +46,11 @@
         <h2>
             <%=item.auther%>
         </h2>
-        <p>
+<a href="/books/<%=item.id%>">View Full Details/ Edit</a>
+<!-- <button id="details">Show more Details</button> -->
+        
+        <article>
+            <p>
             <%=item.description %>
         </p>
         <p>
@@ -47,7 +59,18 @@
         <p>
             <%=item.bookshelf%>
         </p>
+       
+        </article>
+
+    </div>
+
+    
+    
+
+
+        
         <% }) %>
+    </section>
     </main>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

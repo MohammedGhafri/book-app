@@ -37,30 +37,30 @@
 </article>
 
         </div>
-    </section>
-    <button class="selectButton">Select This Book</button>
-    <form class="selectForm"action="/select" method="POST">
-        <label for="">
-            <span>Image</span><input type="text" name="image" value="<%=item.image%>"></label>
-        <label for="">
-            <span>
-                Title
-            </span><input type="text" name="title" value="<%=item.title %>"></label>
-        <label for=""><span>
-            Auther
-        </span><input type="text" name="auther" value="<%=item.authors %>"></label>
-        <textarea name="description" id="" cols="30" rows="10"> <%=item.description %></textarea>
-        <label for=""><span>
-            ISBN
-        </span><input type="text" name="isbn" value="<%=item.ISBN %>"></label>
-        <label for=""><span>
-            Enter Book Shelf :
-        </span><input type="text" name="shelf" value=""></label>
-        <button>Add to List</button>
-        
-    </form>
-    <section>
-        <% }) %>
+        <button class="selectButton">Select This Book</button>
+        <form class="selectForm"action="/select" method="POST">
+            <label for="">
+                <span>Image</span><input type="text" name="image" value="<%=item.image%>"></label>
+                <label for="">
+                    <span>
+                        Title
+                    </span><input type="text" name="title" value="<%=item.title %>"></label>
+                    <label for=""><span>
+                        Auther
+                    </span><input type="text" name="auther" value="<%=item.authors %>"></label>
+                    <textarea name="description" id="" cols="30" rows="10"> <%=item.description %></textarea>
+                    <label for=""><span>
+                        ISBN
+                    </span><input type="text" name="isbn" value="<%=item.ISBN %>"></label>
+                    <label for=""><span>
+                        Enter Book Shelf :
+                    </span><input type="text" name="shelf" value=""></label>
+                    <button>Add to List</button>
+                    
+                </form>
+                <% }) %>
+            </section>
+        <section>
         <i class="fa fa-facebook" aria-hidden="true"></i>
         <i class="fa fa-twitter" aria-hidden="true"></i>
     </section>

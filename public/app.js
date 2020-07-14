@@ -34,3 +34,18 @@ $('.hhhh').on('click',function(){
 
   $(this).next('ul').slideToggle();
 })
+
+
+$('#details').on('click',function(){
+  $(this).text(function(i, text){
+    return text === "Show more Details" ? "Show less Details" : "Show more Details";
+  });
+  $(this).next().toggle();
+})
+
+//Update form is hidden by defualt
+$('.updatefrom').hide();
+// Yo show update form when update button clicked
+$('#updateDetails').on('click',function(){
+  $(this).next('.updatefrom').toggle();
+})

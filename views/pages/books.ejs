@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Books app 
+        </h1>
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <nav>
+            <button class="hhhh">menu</button>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/search">Search for book</a></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div>
+
+            
+        <img src="<%=bookdetails.img %>" alt="">
+        <h2>
+            <%= bookdetails.title %>
+        </h2>
+        <h2>
+            <%=bookdetails.auther%>
+        </h2>
+
+        <p>
+            <%=bookdetails.description %>
+        </p>
+        <p>
+            <%=bookdetails.isbn%>
+        </p>
+        <p>
+            <%=bookdetails.bookshelf%>
+        </p>
+        </div>
+        <form action="/del/<%=bookdetails.id%>?_method=delete" method="post">
+            <button id="deletDetails">Delete</button>
+        
+        </form>
+
+        <button id="updateDetails">Update</button>
+
+        <form class="updatefrom"action="/update/<%=bookdetails.id%>?_method=put" method="POST">
+            <label for="">
+                <span>Image</span><input type="text" name="image" value="<%=bookdetails.img %>"></label>
+                <label for="">
+                    <span>
+                        Title
+                    </span><input type="text" name="title" value="<%=bookdetails.title %>"></label>
+                    <label for=""><span>
+                        Auther
+                    </span><input type="text" name="auther" value="<%=bookdetails.auther %>"></label>
+                    <textarea name="description" id="" cols="30" rows="10"> <%=bookdetails.description %></textarea>
+                    <label for=""><span>
+                        ISBN
+                    </span><input type="text" name="isbn" value="<%=bookdetails.isbn %>"></label>
+                    <label for=""><span>
+                        Enter Book Shelf :
+                    </span><input type="text" name="shelf" value="<%=bookdetails.bookshelf%>"></label>
+                    <button>Update</button>
+                    
+                </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
