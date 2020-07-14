@@ -15,7 +15,24 @@
 <body>
     <header>Hello 301 Instructional Team ♥</header>
     <main>
-        
+        <% data.forEach(item=>{ %>
+            <img src="<%=item.img %>" alt="">
+            <h2>
+                <%= item.title %>
+            </h2>
+            <h2>
+                <%=item.auther%>
+            </h2>
+            <p>
+                <%=item.description %>
+            </p>
+            <p>
+                <%=item.isbn%>
+            </p>
+            <p>
+                <%=item.bookshelf%>
+            </p>
+       <% }) %>
     </main>
     <footer></footer>
 </body>
