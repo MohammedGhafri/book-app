@@ -29,18 +29,18 @@ server.use(express.static('./public'));
 //     res.render('./pages/index.ejs');
 
 // })
-server.get('/hello',(req,res)=>{
-    console.log("annnnnyyyyyy")
+server.get('/search',(req,res)=>{
+    // console.log("annnnnyyyyyy")
     // res.render('./pages/index.ejs');
     res.render('./pages/searches/new.ejs');
 
 })
 server.get('/',show);
 server.post('/select',addTo);
-server.post('/searches',(req,res)=>{
-    console.log('Get request',req.body);
+server.post('/takeBook',(req,res)=>{
+    // console.log('Get request',req.body);
     // res.status(200).send(req.query);
-    console.log(req.body.TypeOfSearch)
+    // console.log(req.body.TypeOfSearch)
     const name=req.body.name;
     const search=req.body.TypeOfSearch;
     
@@ -53,23 +53,19 @@ server.post('/searches',(req,res)=>{
     // new Book(book)
     .then(result=> result.body.items.map(book=>new Book(book)))
     .then(renderData=> { 
-        console.log(renderData);
+        // console.log(renderData);
         res.render('./pages/searches/show.ejs',{bookData:renderData})
     });
     
     
 
     
-    // .then(renderData=>  res.send(renderData));
     
-    // res.render('show',{bookData:renderData})
-    // res.send(renderData)
-    // res.render('./pages/index.ejs');
 })
 
 
 function addTo(req,res){
-    console.log(req.body);
+    // console.log(req.body);
     let SQL=`INSERT INTO book (img, title, auther, description,isbn, bookShelf) VALUES ($1,$2,$3,$4,$5,$6);`
     let safeValues=[req.body.image,req.body.title,req.body.auther,req.body.description,req.body.isbn,req.body.shelf];
     client.query(SQL,safeValues)
@@ -77,7 +73,7 @@ function addTo(req,res){
     // res.redirect('/');
 
         res.redirect('/');
-    console.log("mmmmm")
+    // console.log("mmmmm")
     })
 
 }
@@ -106,12 +102,11 @@ client.connect()
     function Book(item){
         
          this.image=((item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg');
-        // this.image= ((item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg')
+      
         this.title=item.volumeInfo.title;
         this.authors=((item.volumeInfo.authors) ? item.volumeInfo.authors[0] : 'unKnown');
         this.description=item.searchInfo ? item.searchInfo.textSnippet : "not avaliable";
         this.ISBN=item.volumeInfo.industryIdentifiers ? item.volumeInfo.industryIdentifiers[0].identifier.slice(item.volumeInfo.industryIdentifiers[0].identifier.indexOf(":")+1) :"not avalaible" ;
-        // // :'not available';
-        // console.log(((item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg'))
+        
     
     }
