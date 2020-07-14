@@ -9,15 +9,49 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
 <body>
-    <header>Hello 301 Instructional Team ♥</header>
+    <header>
+        <h1>
+            Books app 
+        </h1>
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <nav>
+            <button class="hhhh">menu</button>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/search">Search for book</a></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        
+        <% data.forEach(item=>{ %>
+        <img src="<%=item.img %>" alt="">
+        <h2>
+            <%= item.title %>
+        </h2>
+        <h2>
+            <%=item.auther%>
+        </h2>
+        <p>
+            <%=item.description %>
+        </p>
+        <p>
+            <%=item.isbn%>
+        </p>
+        <p>
+            <%=item.bookshelf%>
+        </p>
+        <% }) %>
     </main>
     <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="/app.js"></script>
 </body>
 
 </html>

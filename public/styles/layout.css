@@ -27,4 +27,19 @@ span{
 i{
     width: 200%;
 }
+input{
+    display: block;
+    margin: auto;
+    text-align: center;
 
+}
+textarea
+{
+    display: block;
+    margin: auto;
+    text-align: center;
+
+}
+nav{
+    position: absolute;
+}
