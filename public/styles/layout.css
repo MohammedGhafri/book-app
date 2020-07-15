@@ -60,11 +60,29 @@ li{
     width: 100px;
 }
 #updateDetails{
-    background-color: #1BDBB1;
+    /* background-color: #1BDBB1; */
     height: 40px;
     width: 100px;
 }
 .updatefrom button{
     height: 40px;
     width: 100px;
+}
+.updatefrom{
+    margin: -52% 0 0 42%;
+    width: 37%;
+    background-color: #37CC2F;
+    box-shadow: 1px 1px 5px black;
+    height: 700px;
+}
+.updatefrom input{
+    width: 80%;
+    height: 50px;
+}
+.updatefrom textarea{
+    width: 80%;
+}
+.updatefrom button{
+    margin: 2% 0 0 9%;
+    width: 82%;
 }

@@ -65,7 +65,15 @@
                     <label for=""><span>
                         Auther
                     </span><input type="text" name="auther" value="<%=bookdetails.auther %>"></label>
-                    <textarea name="description" id="" cols="30" rows="10"> <%=bookdetails.description %></textarea>
+                    <label for="">
+                        <span>
+                            Text Description
+                        </span>
+                       <textarea name="description" id="" cols="30" rows="10">
+                        <%=bookdetails.description %>
+                    </textarea> 
+                    </label>
+                    
                     <label for=""><span>
                         ISBN
                     </span><input type="text" name="isbn" value="<%=bookdetails.isbn %>"></label>

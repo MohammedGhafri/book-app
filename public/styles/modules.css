@@ -9,7 +9,7 @@ div{
 }
 img{
     /* margin: auto; */
-    
+    border: 1px dashed #f3f3f3;
     margin: 1% 0 1% 8%;
     width: 80%;
     /* padding: 2% 44%; */
