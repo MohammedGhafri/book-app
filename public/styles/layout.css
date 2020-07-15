@@ -178,4 +178,37 @@ li {
 #sectionShow form>button{
     margin: 2% auto;
 }
+#searchForm{
+    border: 3px solid #FFD958;
+    width:40% ;
+    margin: 13% 0 0 27%;
+}
+
+#searchForm>*{
+    display: block;
+    margin: 2% auto 0% auto;
+    text-align: center;
+}
+#searchForm label>span{
+    margin: 2% auto;
+}
+#searchForm label>input{
+    width: 70%;
+}
+#searchForm label:first-child>input{
+    height: 30px;
+}
+#searchForm label>*{
+    margin: 3% auto 0 auto;
+    
+    display: block;
+    text-align: center;
+}
+#search{
+    display: block;
+    text-align: center;
+    margin: 1% auto;
+    width: 30%;
+    height: 30px;
+}
 

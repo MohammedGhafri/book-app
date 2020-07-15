@@ -9,27 +9,36 @@
     
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/base.css">
+    <!-- <link rel="stylesheet" href="/styles/base.css"> -->
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 
 </head>
 
 <body>
-    <header>Searching</header>
+    <header>
+        <h1>
+            Books app 
+        </h1>
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <nav>
+            <button class="hhhh">menu</button>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/search">Search for book</a></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <!-- <form action="/search" method="get">
-            <input type="text"name="nameof" placeholder="What you are searching for">
-            <button value="tilte"> By Title</button>
-            <button value="auther">By Auther</button> -->
-            <!-- <button value="any">Go</button> -->
-
-        <!-- </form>  -->
-        <form action="/takeBook" method="post">
+       
+        <form id="searchForm" action="/takeBook" method="post">
             <label>
                 <span>Name</span>
-                <input type="text" name="name" required>
+                <input type="text" name="name" placeholder="Enter Your search word/s" required>
             </label>
             
             <label >Search By Title
