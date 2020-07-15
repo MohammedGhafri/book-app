@@ -1,88 +1,181 @@
-
-input.blue.search{
-color: green;
+input.blue.search {
+    color: green;
 }
-div{
-    background-color:#37CC2F ;
+
+div {
+    background-color: #37CC2F;
     margin: 3%;
     padding: 0 1%;
 }
 
-p{
+p {
     line-height: 130%;
-text-align: justify;
+    text-align: justify;
     /* margin: auto; */
-text-align: center;
-
+    text-align: center;
 }
-span{
+
+span {
     display: block;
     /* margin: 1% 0 0 37%; */
     text-align: center;
     /* padding: 5%; */
-    
 }
 
-input{
+input {
     display: block;
     margin: auto;
     text-align: center;
-
 }
-textarea
-{
+
+textarea {
     display: block;
     margin: auto;
     text-align: center;
-
 }
 
-
-
-nav{
+nav {
     float: right;
 }
-ul{
+
+ul {
     float: left;
 }
-li{
-    
+
+li {
     display: inline-block;
 }
 
-.formwithdel{
+.formwithdel {
     margin: 0 14% 0 3%;
     float: left;
 }
-.formwithdel button{
+
+.formwithdel button {
     background-color: red;
     height: 40px;
     width: 100px;
 }
-#updateDetails{
+
+#updateDetails {
     /* background-color: #1BDBB1; */
     height: 40px;
     width: 100px;
 }
-.updatefrom button{
+
+.updatefrom button {
     height: 40px;
     width: 100px;
 }
-.updatefrom{
+
+.updatefrom {
     margin: -52% 0 0 42%;
     width: 37%;
     background-color: #37CC2F;
     box-shadow: 1px 1px 5px black;
     height: 700px;
 }
-.updatefrom input{
+
+.updatefrom input {
     width: 80%;
     height: 50px;
 }
-.updatefrom textarea{
+
+.updatefrom textarea {
     width: 80%;
 }
-.updatefrom button{
+
+.updatefrom button {
     margin: 2% 0 0 9%;
     width: 82%;
 }
+
+#sectionIndex {
+    width: 100%;
+    background-color: #72DBB1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#sectionIndex div {
+    height: 500px;
+    margin: 5% 1% 0 1%;
+    width: 28%;
+}
+
+#sectionIndex div>* {
+    margin: 4% auto;
+    display: block;
+    text-align: center;
+}
+
+#sectionIndex div>a {
+    color: black;
+    line-height: 30px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #D9D527;
+    border-radius: 3px;
+    opacity: 0.8;
+    width: 50%;
+}
+
+#sectionIndex div>a:hover {
+    opacity: 1;
+}
+
+
+#sectionShow div>* {
+    display: block;
+    text-align: center;
+    margin: 3% auto;
+}
+
+#sectionShow div>button {
+    margin: 0 auto;
+}
+
+.selectForm {
+    margin: 1% 0 0 1%;
+}
+#sectionShow{
+    background-color: #72DBB1;
+    
+}
+#sectionShow button{
+    height: 30x;
+    width: 25%;
+    margin: 0 0 0 4%;
+}
+#sectionShow form{
+    box-shadow: 1px 1px 5px black;
+    position: absolute;
+    margin: -50.5% 0 0 48%;
+    background-color: #37CC2F;
+    height: 680px;
+    border-radius: 3px;
+    width: 35%;
+}
+#sectionShow form>*{
+    display: block;
+    text-align: center;
+}
+#sectionShow form label>input{
+    
+    height: 25px;
+    margin: 2% auto;
+    border-radius: 3px;
+    width: 80%;
+}
+#sectionShow form >textarea{
+    border-radius: 3px;
+    
+    margin: 2% auto;
+    width: 80%;
+}
+#sectionShow form>button{
+    margin: 2% auto;
+}
+
