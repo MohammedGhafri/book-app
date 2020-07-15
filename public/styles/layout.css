@@ -3,19 +3,17 @@ input.blue.search{
 color: green;
 }
 div{
-    background-color:grey ;
+    background-color:#37CC2F ;
     margin: 3%;
-    padding: 3%;
+    padding: 0 1%;
 }
-img{
-    padding: 2% 44%;
-}
+
 p{
     line-height: 130%;
 text-align: justify;
     /* margin: auto; */
 text-align: center;
-    /* WIDTH: 50%; */
+
 }
 span{
     display: block;
@@ -24,9 +22,7 @@ span{
     /* padding: 5%; */
     
 }
-i{
-    width: 200%;
-}
+
 input{
     display: block;
     margin: auto;
@@ -40,6 +36,53 @@ textarea
     text-align: center;
 
 }
+
+
+
 nav{
-    position: absolute;
+    float: right;
+}
+ul{
+    float: left;
+}
+li{
+    
+    display: inline-block;
+}
+
+.formwithdel{
+    margin: 0 14% 0 3%;
+    float: left;
+}
+.formwithdel button{
+    background-color: red;
+    height: 40px;
+    width: 100px;
+}
+#updateDetails{
+    /* background-color: #1BDBB1; */
+    height: 40px;
+    width: 100px;
+}
+.updatefrom button{
+    height: 40px;
+    width: 100px;
+}
+.updatefrom{
+    margin: -52% 0 0 42%;
+    width: 37%;
+    background-color: #37CC2F;
+    box-shadow: 1px 1px 5px black;
+    height: 700px;
+}
+.updatefrom input{
+    width: 80%;
+    height: 50px;
+}
+.updatefrom textarea{
+    width: 80%;
+}
+.updatefrom button{
+    margin: 2% 0 0 9%;
+    width: 82%;
 }
