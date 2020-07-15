@@ -29,8 +29,9 @@ $('.selectButton').on("click",function(){
   $(this).next().toggle();
   console.log("mmmmm");
 })
+$('ul').hide();
 
-$('.hhhh').on('click',function(){
+$('.menuButton').on('click',function(){
 
   $(this).next('ul').slideToggle();
 })

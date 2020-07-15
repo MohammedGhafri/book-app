@@ -1,3 +1,55 @@
+
+
+
+
+/* 
+nav {
+    float: right;
+}
+
+ul {
+    float: left;
+}
+
+li {
+    display: inline-block;
+} */
+
+nav h1{
+    font-size: 34px;
+    color: #72DBB1;
+}
+nav i{
+    color: #37CC2F;
+}
+nav>*{
+    display: inline;
+}
+nav button{
+    float: right;
+}
+nav ul{
+    float: right;
+    width: 250px;
+}
+nav ul li{
+    text-align: center;
+    background-color: yellowgreen;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
 input.blue.search {
     color: green;
 }
@@ -34,17 +86,6 @@ textarea {
     text-align: center;
 }
 
-nav {
-    float: right;
-}
-
-ul {
-    float: left;
-}
-
-li {
-    display: inline-block;
-}
 
 .formwithdel {
     margin: 0 14% 0 3%;
